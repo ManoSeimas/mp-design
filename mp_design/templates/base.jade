@@ -1,6 +1,13 @@
-!!! 5
+| {% load static from staticfiles %}
+| {% load compress from compress %}
+
+
+doctype html
+
 html(lang=en)
     head
         title hello
+        - compress css
+            link(rel="stylesheet", type="text/x-scss", href="{% static 'test.scss' %}")
     body
         h1 World!
