@@ -1,13 +1,22 @@
-| {% load static from staticfiles %}
-| {% load compress from compress %}
+- load static from staticfiles
+- load compress from compress
 
-
-doctype html
-
+!!! 5
 html(lang=en)
-    head
-        title hello
-        - compress css
-            link(rel="stylesheet", type="text/x-scss", href="{% static 'test.scss' %}")
-    body
-        h1 World!
+  head
+    title hello
+    link(rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}")
+    - compress css
+      link(rel="stylesheet", type="text/x-scss", href="{% static 'main.scss' %}")
+
+    script(src="http://code.jquery.com/jquery.js")
+    script(src="bootstrap/js/bootstrap.min.js")
+
+  body
+    h1.text-warning World!
+      small Testing bootstrap 2
+
+    div.btn-group
+      button.btn Left
+      button.btn Center
+      button.btn Right
