@@ -1,0 +1,4 @@
+Django==1.8.2
+-e git+https://github.com/syrusakbary/pyjade.git@74e16e748eaf16957b6892476b49589787e23758#egg=pyjade-master
+six==1.9.0
+wsgiref==0.1.2
