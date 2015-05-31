@@ -4,19 +4,68 @@
 !!! 5
 html(lang=en)
   head
-    title hello
-    link(rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}")
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="manoSeimas")
+    meta(property="og:description" content="Atlik testą, sudarytą iš svarbiausių 2008-2012 m. Seime vykusių balsavimų, ir sužinok, kurie Seimo nariai ir partijos geriausiai atstovavo tavo interesams.")
+    meta(property="og:image" content="http://manoseimas.lt/static/img/logo_square.jpg")
+    meta(property="og:url" content="http://manoseimas.lt")
+
+    title {% block title %}{{ title }}{% endblock %}
+
+    link(rel="shortcut icon", type="image/x-icon", href="{% static 'favicon.png' %}")
+    //- link(rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}")
+    link(rel="stylesheet" href="{% static 'semantic/semantic.min.css' %}")
     - compress css
+      link(rel="stylesheet", type="text/x-scss", href="{% static 'fonts/open-sans/stylesheet.scss'%}")
+      link(rel="stylesheet", type="text/x-scss", href="{% static 'css/styles.scss' %}")
       link(rel="stylesheet", type="text/x-scss", href="{% static 'main.scss' %}")
 
     script(src="http://code.jquery.com/jquery.js")
-    script(src="bootstrap/js/bootstrap.min.js")
+    script(src="{% static 'bootstrap/js/bootstrap.min.js' %}")
+    script(src="{% static 'semantic/semantic.js' %}")
+    script(src="{% static 'javascript/main.js' %}")
 
   body
-    h1.text-warning World!
-      small Testing bootstrap 2
+    - include "components/header.jade" with title="Home"
 
-    div.btn-group
-      button.btn Left
-      button.btn Center
-      button.btn Right
+    div#middle
+      - block middle
+          - block container
+            .ui.page.grid
+              .twelve.wide.column
+                .ui.segment
+                  | {% block content %}
+                  | {% endblock %}
+              .six.wide.column
+                | {% block sidebar %}
+                | {% endblock %}
+
+
+    footer
+      .ui.vertical.segment
+        .ui.page.grid
+          .doubling.two.column.row
+            .column
+              a(target="_blank" href="http://www.transparency.lt")
+                img(src="{% static 'img/tils-logo-updated.png' %}")
+            .column
+              .ui.grid
+                .four.wide.column
+                  h2: a(href="/apie-projekta/") Apie projektą
+                .three.wide.column
+                  h2: a(href="/testas") Testas
+                .four.wide.column
+                  h2: a(href="/prisijunk") Prisijunk
+                .four.wide.column
+                  a(target="_blank" href="http://www.facebook.com/tilietuva")
+                    img(src="{% static 'img/fb-icon-32.png' %}")
+                  a(target="_blank" href="http://www.twitter.com/#!/ManoSeimas")
+                    img(src="{% static 'img/twitter-icon-32.png' %}")
+              .sixteen.wide.column.row
+                .copyright Kai kurios teisės saugomos (ↄ) 2012-2015 manoSeimas.lt
+
+  | {% block inlinejs %}{% endblock %}
