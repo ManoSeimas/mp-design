@@ -1,0 +1,63 @@
+- extends "base.jade"
+- load static from staticfiles
+
+- block title
+  | Labas rytas
+
+- block middle
+  .photo-box.index
+    .ui.page.grid
+      .doubling.two.column.row
+        .column.center.aligned
+          img(src="{% static 'img/logo-white.png' %}").logo
+          h1.title Stebėk kaip dirba seimo nariai
+        .column
+          .stats-box
+            h2 Some cool stats
+            ul
+              li One
+              li Two
+              li Three
+
+
+  .ui.vertical.segment
+    h1.ui.header.centered Index page
+
+    .ui.page.grid
+      .ui.toggle.animation.checkbox
+        input(name="animation" type="checkbox")
+        label Toggle Animation
+
+      .ui.divider
+
+    .ui.page.grid
+      .doubling.two.column.row
+        .column
+          h1 BOOTSTRAP
+          hr
+          h2.text-warning World!
+            small Testing bootstrap 2
+
+              div.btn-group
+                button.btn Left
+                button.btn Center
+                button.btn Right
+
+        .column
+          h1 SEMANTIC
+          .ui.segment
+            h2.ui.header Hello Semantic
+
+            h2.ui.header
+              .content Learn More
+
+            .ui.primary.button Save
+            .ui.button Discard
+
+          .ui.segment
+            .ui.breadcrumb
+              .section Home
+              .divider /
+              .section Store
+              .divider /
+              .active.section T-Shirt

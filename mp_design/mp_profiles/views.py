@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'base.jade')
+    return render(request, 'index.jade')
