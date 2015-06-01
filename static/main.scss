@@ -9,6 +9,14 @@
 
 
 // Jaro's styles
+h1, h2, h3, h4, h5 { font-weight: normal; }
+h1 { font-size: $huge; }
+h2 { font-size: $big; }
+
+p.text-muted {
+  color: $gray;
+}
+
 header {
   img.logo {
     margin: 7px 0;
@@ -18,7 +26,7 @@ header {
   }
 }
 
-#middle {
+#main-block {
   margin-top: 4.65em;
 }
 
@@ -35,13 +43,14 @@ header {
   border-radius: 5px;
 }
 
+
 // Photo boxes
 // -----------
 .photo-box {
   .title {
     color: $white;
     font-weight: normal;
-    font-size: $big;
+    font-size: 24px;
     margin-top: 0.5em;
   }
 
@@ -56,6 +65,7 @@ header {
 .photo-box.index {
   background: url(#{$staticRoot}/img/frontpage-bg.png);
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 21.4em;
 
   .title {
@@ -65,6 +75,7 @@ header {
 
 .photo-box.fraction {
   background: url(#{$staticRoot}/img/fraction-bg.png);
+  background-position: center;
   min-height: 21em;
 
   .logo-box {
@@ -139,6 +150,7 @@ header {
     width: 180px;
 
     h2 {
+      font-size: $normal;
       line-height: 20px;
       font-weight: normal;
       margin-bottom: 7px;
@@ -162,6 +174,13 @@ header {
   }
 }
 
+.ui.green.wide.button {
+  width: 20em;
+  color: $white;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
 
 // Front page styles
 // -----------------
@@ -171,6 +190,47 @@ header {
   }
 }
 
+.widget {
+  margin: 1em auto 5em auto;
+  top: 40px;
+  position: relative;
+  text-align: center;
+
+}
+
+.widget-box {
+  margin: -1em auto 1.8rem auto;
+  min-height: 21rem;
+  display: block;
+  position: relative;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  border: 1px dashed $grayLite;
+  border-top: none;
+  width: 67em;
+  padding: 2em;
+
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    color: $msGreen;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 500px;
+    display: inline-block;
+
+  }
+}
+
+.test-box {
+  margin: 2em 0;
+  p {
+    margin: auto;
+    width: 35em;
+  }
+}
 
 
 // Footer

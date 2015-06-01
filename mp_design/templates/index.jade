@@ -63,43 +63,19 @@
             p 33% seimo balsų
 
 
-  h1.ui.header.centered Index page
+  .widget
+    img(src="{% static 'img/widget.png' %}")
 
-  .ui.page.grid
-    .ui.toggle.animation.checkbox
-      input(name="animation" type="checkbox")
-      label Toggle Animation
+    .widget-box
+      h3 Įsidėkite šį valdiklį (widget) į savo svetainę!
+      img(src="{% static 'img/widget_include.png' %}")
+      div: a(href="http://manoseimas.lt/widget/builder").ui.green.wide.button Skaityti instrukciją
 
-    .ui.divider
 
-  .ui.page.grid
-    .doubling.two.column.row
-      .column
-        h1 BOOTSTRAP
-        hr
-        h2.text-warning World!
-          small Testing bootstrap 2
-
-            div.btn-group
-              button.btn Left
-              button.btn Center
-              button.btn Right
-
-      .column
-        h1 SEMANTIC
-        .ui.segment
-          h2.ui.header Hello Semantic
-
-          h2.ui.header
-            .content Learn More
-
-          .ui.primary.button Save
-          .ui.button Discard
-
-        .ui.segment
-          .ui.breadcrumb
-            .section Home
-            .divider /
-            .section Store
-            .divider /
-            .active.section T-Shirt
+  .colored-bg
+    .ui.center.aligned.stackable.page.grid
+      .twelve.wide.column
+        .test-box
+          h2 Politinio suderinamumo testas
+          p.text-muted Atlik testą, sudarytą iš svarbiausių 2008-2012 m. Seime vykusių   balsavimų, ir sužinok, kurie Seimo nariai ir partijos balsavo taip, kaip   balsuotum tu.
+          a(href="http://manoseimas.lt/testas/").ui.green.wide.button Pradėti testą
