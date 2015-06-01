@@ -1,0 +1,190 @@
+@import 'css/variables';
+
+// UI Fixtures to deal with bootstrap
+.ui {
+  input[type="search"], input[type="text"] {
+    height: inherit;
+  }
+}
+
+
+// Jaro's styles
+header {
+  img.logo {
+    margin: 7px 0;
+  }
+  .ui.grid > .row {
+    padding-bottom: 0;
+  }
+}
+
+#middle {
+  margin-top: 4.65em;
+}
+
+.colored-bg {
+  background-color: $coloredBgColor;
+  padding: 1em;
+  border-bottom: 1px dashed $grayLite;
+  border-top: 1px dashed $grayLite;
+}
+
+
+.stats-box {
+  background-color:rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+// Photo boxes
+// -----------
+.photo-box {
+  .title {
+    color: $white;
+    font-weight: normal;
+    font-size: $big;
+    margin-top: 0.5em;
+  }
+
+  .stats-box {
+    min-height: 10em;
+    max-width: 25em;
+    padding: 2em;
+    margin: auto;
+  }
+}
+
+.photo-box.index {
+  background: url(#{$staticRoot}/img/frontpage-bg.png);
+  background-repeat: no-repeat;
+  min-height: 21.4em;
+
+  .title {
+    margin-right: 1em;
+  }
+}
+
+.photo-box.fraction {
+  background: url(#{$staticRoot}/img/fraction-bg.png);
+  min-height: 21em;
+
+  .logo-box {
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    padding: 1.2em 2em;
+    display: inline-block;
+    margin-top: 1.5em;
+
+    img { width: 160px;}
+  }
+
+  .title {
+    display: table;
+    height: 6.5em;
+
+    h1 {
+      font-size: $huge;
+      font-weight: normal;
+      text-shadow: 2px 2px $grayDark;
+      line-height: 1.2;
+      display: table-cell;
+      vertical-align: middle;
+      color: $white;
+    }
+  }
+}
+
+
+// Elements
+// -----------
+.switcher {
+  border: 1px solid $msBlue;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  overflow: hidden;
+
+  .item {
+    padding: 0.3em 4em;
+    position: relative;
+    display: inline-block;
+    color: $msBlue;
+  }
+
+  .active,
+  :hover {
+    background-color: $msBlue;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+
+.fraction-box {
+  background-color: $white;
+  width: 300px;
+  border: 1px dashed $grayLite;
+  display: inline-block;
+  padding: 0.7rem 0.5rem 0.5rem 1rem !important;
+  margin: 10px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info {
+    float: right;
+    width: 180px;
+
+    h2 {
+      line-height: 20px;
+      font-weight: normal;
+      margin-bottom: 7px;
+
+      a {
+        color: $textColor;
+      }
+
+      a:hover {
+        color: $linkColor;
+        text-decoration: none;
+      }
+
+    }
+
+    p {
+      font-size: $small;
+      color: $grayLite;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Front page styles
+// -----------------
+.index {
+  .column {
+    padding: 2em;
+  }
+}
+
+
+
+// Footer
+// ------
+footer {
+  .ui{
+    img {
+      margin-right: 5px
+    }
+
+    .copyright {
+      margin: 10px 20px;
+      font-size: 85%;
+      color: $textColor;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+- extends "base.jade"
+- load static from staticfiles
+
+- block title
+  | Socialdemokratų partijos frakcija
+
+
+- block middle
+  .photo-box.fraction
+    .ui.page.grid
+      .center.aligned.four.wide.column
+        .logo-box
+          img(src="{% static 'img/fractions/lsdp.png' %}")
+      .twelve.wide.column
+        .title
+          h1 Lietuvos Socialdemokratų partijos frakcija

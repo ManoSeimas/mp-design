@@ -19,45 +19,87 @@
               li Two
               li Three
 
+  .colored-bg
+    .ui.center.aligned.vertical.segment
+      .switcher
+        a(href="#").item.active Frakcijos
+        a(href="#").item Parlamentarai
 
-  .ui.vertical.segment
-    h1.ui.header.centered Index page
+      .ui.page.grid
+        .fraction-box
+          img(src="{% static 'img/fractions/lsdp.png' %}")
+          .info
+            h2: a(href="{% url 'fraction' %}") Lietuvos socialdemokratų partijos frakcija
+            p 23 nariai
+            p 33% seimo balsų
 
-    .ui.page.grid
-      .ui.toggle.animation.checkbox
-        input(name="animation" type="checkbox")
-        label Toggle Animation
+        .fraction-box
+          img(src="{% static 'img/fractions/ts-lkd.png' %}")
+          .info
+            h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
+            p 23 nariai
+            p 33% seimo balsų
 
-      .ui.divider
+        .fraction-box
+          img(src="{% static 'img/fractions/tt.png' %}")
+          .info
+            h2 Tvarka ir teisingumas frakcija
+            p 23 nariai
+            p 33% seimo balsų
 
-    .ui.page.grid
-      .doubling.two.column.row
-        .column
-          h1 BOOTSTRAP
-          hr
-          h2.text-warning World!
-            small Testing bootstrap 2
+        .fraction-box
+          img(src="{% static 'img/fractions/ts-lkd.png' %}")
+          .info
+            h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
+            p 23 nariai
+            p 33% seimo balsų
 
-              div.btn-group
-                button.btn Left
-                button.btn Center
-                button.btn Right
 
-        .column
-          h1 SEMANTIC
-          .ui.segment
-            h2.ui.header Hello Semantic
+        .fraction-box
+          img(src="{% static 'img/fractions/lsdp.png' %}")
+          .info
+            h2 Lietuvos socialdemokratų partijos frakcija
+            p 23 nariai
+            p 33% seimo balsų
 
-            h2.ui.header
-              .content Learn More
 
-            .ui.primary.button Save
-            .ui.button Discard
+  h1.ui.header.centered Index page
 
-          .ui.segment
-            .ui.breadcrumb
-              .section Home
-              .divider /
-              .section Store
-              .divider /
-              .active.section T-Shirt
+  .ui.page.grid
+    .ui.toggle.animation.checkbox
+      input(name="animation" type="checkbox")
+      label Toggle Animation
+
+    .ui.divider
+
+  .ui.page.grid
+    .doubling.two.column.row
+      .column
+        h1 BOOTSTRAP
+        hr
+        h2.text-warning World!
+          small Testing bootstrap 2
+
+            div.btn-group
+              button.btn Left
+              button.btn Center
+              button.btn Right
+
+      .column
+        h1 SEMANTIC
+        .ui.segment
+          h2.ui.header Hello Semantic
+
+          h2.ui.header
+            .content Learn More
+
+          .ui.primary.button Save
+          .ui.button Discard
+
+        .ui.segment
+          .ui.breadcrumb
+            .section Home
+            .divider /
+            .section Store
+            .divider /
+            .active.section T-Shirt

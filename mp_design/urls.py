@@ -20,6 +20,10 @@ from mp_design.mp_profiles import views
 
 urlpatterns = [
     url('^$', views.index),
+    url(r'^fractions/tt/', views.fraction, name='fraction'),
+    url(r'^fractions/', views.fractions, name='fractions'),
+    url(r'^mps/', views.mps, name='mps'),
+    url(r'^mps/grazulis/', views.parliamentarian, name='parliamentarian'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
