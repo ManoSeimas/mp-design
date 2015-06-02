@@ -36,7 +36,7 @@ header {
 
 .colored-bg {
   background-color: $coloredBgColor;
-  padding: 1em;
+  padding: 2em 1em;
   border-bottom: 1px dashed $grayLite;
   border-top: 1px dashed $grayLite;
 }
@@ -94,7 +94,7 @@ header {
 
   .title {
     display: table;
-    height: 6.5em;
+    height: 8.5em;
 
     h1 {
       font-size: $huge;
