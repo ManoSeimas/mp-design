@@ -1,6 +1,7 @@
 @import 'css/variables';
 @import 'css/photo-box';
 @import 'css/elements';
+@import 'css/parliamentarians';
 
 // UI Fixtures to deal with bootstrap
 .ui {
@@ -11,6 +12,11 @@
   .progress {
     height: inherit;
   }
+}
+
+.ui.zero.margin.page.grid,
+.ui.zero.margin.center.aligned.grid {
+  margin: 0 !important;
 }
 
 
@@ -44,7 +50,7 @@ header {
 
 .colored-bg {
   background-color: $coloredBgColor;
-  padding: 2em 1em;
+  padding: 0 1em;
   border-bottom: 1px dashed $grayLite;
   border-top: 1px dashed $grayLite;
 }
@@ -219,15 +225,17 @@ header {
   }
 }
 .parliamentarian.box {
-  width: 280px;
-  margin: 10px 20px;
+  width: 260px;
+  margin: 10px 7px;
 
-  .info a.fraction-name {
-    font-size: $small;
-    line-height: 0.5;
-    color: $greenDark;
+  .info {
+    width: 165px;
+    a.fraction-name {
+      font-size: $small;
+      line-height: 0.5;
+      color: $greenDark;
+    }
   }
-
 }
 .fraction.box {
   width: 300px;
@@ -254,6 +262,10 @@ header {
   .column {
     padding: 2em;
   }
+}
+
+.ui.page.grid.fraction {
+  margin: 1rem 0;
 }
 
 .widget {
@@ -301,9 +313,6 @@ header {
 
 // Fraction page styles
 // --------------------
-.parliamentarians {
-  margin: 3em 0;
-}
 
 .decisions {
   padding-top: 3em;
