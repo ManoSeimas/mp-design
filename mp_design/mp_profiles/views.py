@@ -1,14 +1,33 @@
+from django.core.urlresolvers import reverse
 from django.shortcuts import render
-
-# Create your views here.
 
 
 def index(request):
-    return render(request, 'index.jade')
+    context = {
+        'items': [
+            {'name': 'Frakcijos',
+             'active': 'active',
+             'url': reverse('fractions')},
+            {'name': 'Parlamentarai',
+             'active': False,
+             'url': reverse('mps')},
+        ]
+    }
+    return render(request, 'index.jade', context)
 
 
 def fractions(request):
-    return render(request, 'fractions.jade')
+    context = {
+        'items': [
+            {'name': 'Frakcijos',
+             'active': 'active',
+             'url': reverse('fractions')},
+            {'name': 'Parlamentarai',
+             'active': False,
+             'url': reverse('mps')},
+        ]
+    }
+    return render(request, 'fractions.jade', context)
 
 
 def fraction(request):
@@ -16,7 +35,17 @@ def fraction(request):
 
 
 def mps(request):
-    return render(request, 'mps.jade')
+    context = {
+        'items': [
+            {'name': 'Frakcijos',
+             'active': False,
+             'url': reverse('fractions')},
+            {'name': 'Parlamentarai',
+             'active': 'active',
+             'url': reverse('mps')},
+        ]
+    }
+    return render(request, 'mps.jade', context)
 
 
 def parliamentarian(request):

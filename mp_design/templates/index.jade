@@ -20,41 +20,38 @@
               li Three
 
   .colored-bg
-    .ui.center.aligned.vertical.segment
-      .switcher
-        a(href="#").item.active Frakcijos
-        a(href="#").item Parlamentarai
+    - include "components/switcher.jade" with items=items
 
-      .ui.page.grid
-        .fraction.box
-          img(src="{% static 'img/fractions/lsdp.png' %}")
-          .info
-            h2: a(href="{% url 'fraction' %}") Lietuvos socialdemokratų partijos frakcija
-            p 23 nariai
+    .ui.page.grid
+      .fraction.box
+        img(src="{% static 'img/fractions/lsdp.png' %}")
+        .info
+          h2: a(href="{% url 'fraction' %}") Lietuvos socialdemokratų partijos frakcija
+          p 23 nariai
 
-        .fraction.box
-          img(src="{% static 'img/fractions/ts-lkd.png' %}")
-          .info
-            h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
-            p 23 nariai
+      .fraction.box
+        img(src="{% static 'img/fractions/ts-lkd.png' %}")
+        .info
+          h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
+          p 23 nariai
 
-        .fraction.box
-          img(src="{% static 'img/fractions/tt.png' %}")
-          .info
-            h2 Tvarka ir teisingumas frakcija
-            p 23 nariai
+      .fraction.box
+        img(src="{% static 'img/fractions/tt.png' %}")
+        .info
+          h2 Tvarka ir teisingumas frakcija
+          p 23 nariai
 
-        .fraction.box
-          img(src="{% static 'img/fractions/ts-lkd.png' %}")
-          .info
-            h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
-            p 23 nariai
+      .fraction.box
+        img(src="{% static 'img/fractions/ts-lkd.png' %}")
+        .info
+          h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
+          p 23 nariai
 
-        .fraction.box
-          img(src="{% static 'img/fractions/lsdp.png' %}")
-          .info
-            h2 Lietuvos socialdemokratų partijos frakcija
-            p 23 nariai
+      .fraction.box
+        img(src="{% static 'img/fractions/lsdp.png' %}")
+        .info
+          h2 Lietuvos socialdemokratų partijos frakcija
+          p 23 nariai
 
 
   .widget
