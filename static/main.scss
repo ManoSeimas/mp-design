@@ -13,13 +13,19 @@
 
 
 // Jaro's styles
-h1, h2, h3, h4, h5 { font-weight: normal; }
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin-left: 0;
+  small { margin-left: 5px; font-size: $small; }
+}
 h1 { font-size: $huge; }
 h2 { font-size: $big; }
 
-p.text-muted {
-  color: $gray;
-}
+
+
+p.text-muted { color: $gray; }
+
+a:hover { text-decoration: none; }
 
 header {
   img.logo {
@@ -379,6 +385,40 @@ header {
 .parliamentarians {
   margin: 3em 0;
 }
+
+.decisions {
+  padding-top: 3em;
+
+  h3.supports { color: $greenDark; }
+  h3.abstention { color: $yellow; }
+  h3.against {color: $redDark; }
+
+  .decision {
+    background-color: $white;
+    width: 19em;
+    height: max-content;
+    margin-bottom: 1em;
+    display: table;
+    padding: 1em 0.7em;
+
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      font-size: $normal;
+      color: $textColor;
+    }
+
+    a:hover {
+      color: lighten($textColor, 30%);
+    }
+  }
+  .decision.support { border-left: 7px solid $greenDark; }
+  .decision.lite-support { border-left: 7px solid $greenLite; }
+  .decision.abstention { border-left: 7px solid $yellow; }
+  .decision.against { border-left: 7px solid $redDark; }
+  .decision.lite-against { border-left: 7px solid $redLite; }
+}
+
 
 // Footer
 // ------
