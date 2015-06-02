@@ -1,0 +1,12 @@
+- extends "base.jade"
+- load static from staticfiles
+
+- block title
+  | Frakcijos
+
+- block middle
+  .photo-box.parliamentarians
+    .ui.page.center.aligned.grid
+      .title: h1 Frakcijos
+
+  - include "components/switcher.jade" with items=items

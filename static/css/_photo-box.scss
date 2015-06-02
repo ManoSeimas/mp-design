@@ -1,0 +1,79 @@
+// Photo boxes
+// -----------
+.photo-box {
+  .title {
+    color: $white;
+    font-weight: normal;
+    font-size: $medium;
+    margin-top: 0.5em;
+  }
+
+  .stats-box {
+    min-height: 10em;
+    max-width: 25em;
+    padding: 2em;
+    margin: auto;
+  }
+}
+
+.photo-box.parliamentarians {
+  background: url(#{$staticRoot}/img/fraction-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 15em;
+
+  .title {
+    padding-top: 3em;
+
+    h1 {
+      font-size: $huge;
+      font-weight: normal;
+      text-shadow: 2px 2px $grayDark;
+      line-height: 1.2;
+      vertical-align: middle;
+      color: $white;
+    }
+  }
+}
+
+.photo-box.index {
+  background: url(#{$staticRoot}/img/frontpage-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 21.4em;
+
+  .title {
+    margin-right: 1em;
+  }
+}
+
+.photo-box.fraction {
+  background: url(#{$staticRoot}/img/fraction-bg.png);
+  background-position: center;
+  min-height: 20em;
+
+  .logo-box {
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    padding: 1.2em 2em;
+    display: inline-block;
+    margin-top: 1.5em;
+
+    img { width: 160px;}
+  }
+
+  .title {
+    display: table;
+    height: 8.5em;
+
+    h1 {
+      font-size: $huge;
+      font-weight: normal;
+      text-shadow: 2px 2px $grayDark;
+      line-height: 1.2;
+      display: table-cell;
+      vertical-align: middle;
+      color: $white;
+    }
+  }
+}

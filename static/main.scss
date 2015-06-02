@@ -1,4 +1,5 @@
 @import 'css/variables';
+@import 'css/photo-box';
 @import 'css/elements';
 
 // UI Fixtures to deal with bootstrap
@@ -55,92 +56,9 @@ header {
 }
 
 
-// Photo boxes
-// -----------
-.photo-box {
-  .title {
-    color: $white;
-    font-weight: normal;
-    font-size: 24px;
-    margin-top: 0.5em;
-  }
-
-  .stats-box {
-    min-height: 10em;
-    max-width: 25em;
-    padding: 2em;
-    margin: auto;
-  }
-}
-
-.photo-box.index {
-  background: url(#{$staticRoot}/img/frontpage-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 21.4em;
-
-  .title {
-    margin-right: 1em;
-  }
-}
-
-.photo-box.fraction {
-  background: url(#{$staticRoot}/img/fraction-bg.png);
-  background-position: center;
-  min-height: 20em;
-
-  .logo-box {
-    background-color:rgba(255, 255, 255, 0.4);
-    border-radius: 5px;
-    padding: 1.2em 2em;
-    display: inline-block;
-    margin-top: 1.5em;
-
-    img { width: 160px;}
-  }
-
-  .title {
-    display: table;
-    height: 8.5em;
-
-    h1 {
-      font-size: $huge;
-      font-weight: normal;
-      text-shadow: 2px 2px $grayDark;
-      line-height: 1.2;
-      display: table-cell;
-      vertical-align: middle;
-      color: $white;
-    }
-  }
-}
-
 
 // Elements
 // -----------
-.switcher {
-  border: 1px solid $msBlue;
-  border-radius: 5px;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3em;
-  overflow: hidden;
-
-  .item {
-    padding: 0.3em 4em;
-    position: relative;
-    display: inline-block;
-    color: $msBlue;
-  }
-
-  .active,
-  :hover {
-    background-color: $msBlue;
-    color: $white;
-    text-decoration: none;
-  }
-}
 
 
 .stats-box {

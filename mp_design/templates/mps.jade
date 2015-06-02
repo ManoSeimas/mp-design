@@ -1,0 +1,62 @@
+- extends "base.jade"
+- load static from staticfiles
+
+- block title
+  | Parlamentarai
+
+- block middle
+  .photo-box.parliamentarians
+    .ui.page.center.aligned.grid
+      .title: h1 Seimo nariai
+
+  - include "components/switcher.jade" with items=items
+
+  .parliamentarians
+    .ui.page.grid
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/petras.jpg' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Petras GRAŽULIS
+          a(href="{% url 'fraction' %}").fraction-name Tvarka ir Teisingumas
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/milda.png' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Milda PETRAUSKIENĖ
+          a(href="{% url 'fraction' %}").fraction-name Lietuvos socialdemokratų partijos frakcija
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/petras.jpg' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Petras GRAŽULIS
+          a(href="{% url 'fraction' %}").fraction-name Tvarka ir Teisingumas
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/milda.png' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Milda PETRAUSKIENĖ
+          a(href="{% url 'fraction' %}").fraction-name Lietuvos socialdemokratų partijos frakcija
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/petras.jpg' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Petras GRAŽULIS
+          a(href="{% url 'fraction' %}").fraction-name Tvarka ir Teisingumas
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/milda.png' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Milda PETRAUSKIENĖ
+          a(href="{% url 'fraction' %}").fraction-name Lietuvos socialdemokratų partijos frakcija
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/petras.jpg' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Petras GRAŽULIS
+          a(href="{% url 'fraction' %}").fraction-name Tvarka ir Teisingumas
+
+      .parliamentarian.box
+        img(src="{% static 'img/tmp/milda.png' %}")
+        .info
+          h2: a(href="{% url 'parliamentarian' %}") Milda PETRAUSKIENĖ
+          a(href="{% url 'fraction' %}").fraction-name Lietuvos socialdemokratų partijos frakcija
