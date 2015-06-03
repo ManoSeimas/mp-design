@@ -5,9 +5,21 @@
   | Parlamentarai
 
 - block middle
-  .photo-box.title
-    .ui.page.center.aligned.grid
-      .title: h1 Seimo nariai
+  .photo-box.single-title
+      .transparent-bg: .title: h1 Seimo nariai
+  //- .photo-box.index
+  //-   .ui.page.grid
+  //-     .doubling.two.column.row
+  //-       .column.center.aligned
+  //-         img(src="{% static 'img/logo-white.png' %}").logo
+  //-         h1.title Stebėk kaip dirba seimo nariai
+  //-       .column
+  //-         .stats-box
+  //-           h2 Some cool stats
+  //-           ul
+  //-             li One
+  //-             li Two
+  //-             li Three
 
   - include "components/switcher.jade" with items=items
 
