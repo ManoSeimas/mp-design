@@ -1,6 +1,6 @@
 .switcher {
   border: 1px solid $msBlue;
-  border-radius: 5px;
+  border-radius: $borderRadius;
   display: inline-block;
   margin: 2em auto 1em auto;
   overflow: hidden;
@@ -20,4 +20,11 @@
     color: $white;
     text-decoration: none;
   }
+}
+.switcher.small {
+  font-size: $tiny;
+  margin-top: 1em;
+  float: right;
+
+  .item { padding: 0.3em 2em; }
 }

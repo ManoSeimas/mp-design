@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.core.urlresolvers import reverse
 from django.shortcuts import render
 
@@ -49,4 +51,14 @@ def mps(request):
 
 
 def parliamentarian(request):
-    return render(request, 'parliamentarian.jade')
+    context = {
+        'items': [
+            {'name': 'Visi pasisakymai',
+             'active': 'active',
+             'url': '#'},
+            {'name': 'Pasiūlytų projektų pasisakymai',
+             'active': False,
+             'url': '#'},
+        ]
+    }
+    return render(request, 'parliamentarian.jade', context)
