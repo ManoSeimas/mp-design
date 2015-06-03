@@ -9,3 +9,34 @@
     .transparent-bg: .title: h1 Frakcijos
 
   - include "components/switcher.jade" with items=items
+
+  .ui.zero.margin.page.grid
+    .fraction.box
+      img(src="{% static 'img/fractions/lsdp.png' %}")
+      .info
+        h2: a(href="{% url 'fraction' %}") Lietuvos socialdemokratų partijos frakcija
+        p 23 nariai
+
+    .fraction.box
+      img(src="{% static 'img/fractions/ts-lkd.png' %}")
+      .info
+        h2: a(href="{% url 'fraction' %}") Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
+        p 23 nariai
+
+    .fraction.box
+      img(src="{% static 'img/fractions/tt.png' %}")
+      .info
+        h2: a(href="{% url 'fraction' %}") Tvarka ir teisingumas frakcija
+        p 23 nariai
+
+    .fraction.box
+      img(src="{% static 'img/fractions/ts-lkd.png' %}")
+      .info
+        h2 Tėvynės sąjunga - Lietuvos kirkš-čionys demokratai
+        p 23 nariai
+
+    .fraction.box
+      img(src="{% static 'img/fractions/lsdp.png' %}")
+      .info
+        h2 Lietuvos socialdemokratų partijos frakcija
+        p 23 nariai
