@@ -357,6 +357,7 @@ header {
 .decisions {
   padding-top: 3em;
 
+  h3 { width: 19em; }
   h3.supports { color: $greenDark; }
   h3.abstention { color: $yellow; }
   h3.against {color: $redDark; }
@@ -367,7 +368,8 @@ header {
     height: max-content;
     margin-bottom: 1em;
     display: table;
-    padding: 1em 0.7em;
+    padding: 0.5em 0.7em;
+    border: 1px dashed #EBEDFB;
 
     a {
       display: table-cell;
@@ -380,11 +382,11 @@ header {
       color: lighten($textColor, 30%);
     }
   }
-  .decision.support { border-left: 7px solid $greenDark; }
-  .decision.lite-support { border-left: 7px solid $greenLite; }
-  .decision.abstention { border-left: 7px solid $yellow; }
-  .decision.against { border-left: 7px solid $redDark; }
-  .decision.lite-against { border-left: 7px solid $redLite; }
+  .decision.support { border-color: $greenDark; border-left: 7px solid $greenDark; }
+  .decision.lite-support { border-color: $greenLite; border-left: 7px solid $greenLite; }
+  .decision.abstention { border-color: $yellow; border-left: 7px solid $yellow; }
+  .decision.against { border-color: $redDark; border-left: 7px solid $redDark; }
+  .decision.lite-against { border-color: $redLite; border-left: 7px solid $redLite; }
 }
 
 
