@@ -1,6 +1,10 @@
 .parliamentarians {
-  margin: 0 0 2em 0;
-  .parliamentarian.box .info h2 { margin-bottom: 0.1em;}
+  margin: 0;
+
+  border-right: 1px dashed $grayLite;
+  padding-top: 0 !important;
+  margin-bottom: 1em;
+
 }
 .parliamentarians.wide {
   margin: 3em 0;
@@ -15,6 +19,7 @@
         line-height: 0.5;
         color: $greenDark;
       }
+      h2 { margin-bottom: 0.3em; }
     }
   }
 }

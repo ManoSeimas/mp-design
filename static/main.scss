@@ -14,9 +14,15 @@
   }
 }
 
+.zero.paddings {
+  padding: 0 !important;
+}
+
+
 .ui.zero.margin.page.grid,
 .ui.zero.margin.center.aligned.grid {
-  margin: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0;
 }
 
 
@@ -199,6 +205,7 @@ header {
 }
 
 
+
 .box {
   margin: 10px;
   display: inline-block;
@@ -226,7 +233,7 @@ header {
 }
 .parliamentarian.box {
   width: 260px;
-  margin: 10px 7px;
+  margin: 0 7px 15px 7px;
 
   .info {
     width: 165px;
@@ -235,6 +242,7 @@ header {
       line-height: 0.5;
       color: $greenDark;
     }
+    h2 { margin-bottom: 0.1em;}
   }
 }
 .fraction.box {
@@ -308,6 +316,37 @@ header {
     margin: auto;
     width: 35em;
   }
+}
+
+.ui.sticky.fixed.top > .sidebar { margin-top: 70px; }
+.sidebar {
+  margin-top: 1em;
+  .item {
+    display: inline-block;
+    background-color: $white;
+    border: 1px solid $grayLite;
+    padding: 0.5rem !important;
+    padding-left: 1rem !important;
+    margin-bottom: 0.5em;
+    width: 13em;
+    cursor: pointer;
+
+    img { height: 40px; width: 40px; margin-right: 5px; cursor: inherit; }
+    h4 { font-size: $small; line-height: 1.2; cursor: inherit; }
+
+    .title {
+      float: right;
+      width: 8em;
+      cursor: inherit;
+    }
+  }
+
+  .item:hover, .item.selected {
+    border-color: $greenDark;
+    background-color: $greenDark;
+    h4 { color: $white; }
+  }
+  .item.selected { padding: 0.8rem 1rem !important; }
 }
 
 

@@ -22,8 +22,8 @@ urlpatterns = [
     url('^$', views.index),
     url(r'^fractions/tt/', views.fraction, name='fraction'),
     url(r'^fractions/', views.fractions, name='fractions'),
-    url(r'^mps/', views.mps, name='mps'),
     url(r'^mps/grazulis/', views.parliamentarian, name='parliamentarian'),
+    url(r'^mps/', views.mps, name='mps'),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
