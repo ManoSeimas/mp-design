@@ -11,9 +11,8 @@
     height: inherit;
   }
 
-  .progress {
-    height: inherit;
-  }
+  .progress { height: inherit;}
+  .pagination { height: inherit; }
 }
 
 .zero.paddings {
@@ -25,6 +24,14 @@
 .ui.zero.margin.center.aligned.grid {
   margin-top: 0 !important;
   margin-bottom: 0;
+}
+
+.ui.pagination.menu {
+  padding: 0;
+  .item {
+    font-size: $small;
+    padding: 0.7em 1em;
+  }
 }
 
 
@@ -64,16 +71,8 @@ header {
 }
 
 
-.stats-box {
-  background-color:rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-}
-
-
-
 // Elements
 // -----------
-
 
 .stats-box {
   background-color: $white;
