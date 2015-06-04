@@ -133,16 +133,27 @@
             a(href="http://manoseimas.lt/3-oji-es-direktyva-gamtines-dujos/") Pridėtinės vertės mokesčio (PVM) didinimas
 
   .transcripts
-    .ui.page.grid
+    .ui.stackable.page.grid
       .nine.wide.column
         h2 Seimo posedžių stenogramos
+        .ui.checkbox
+          input(name="fun" type="checkbox")
+          label Rodyti tik tas kalbos kur parlamentaras yra teikėjas
+
       .seven.wide.column
-        .switcher.small
-          for item in items
-            a(href="{{ item.url }}" class="{{ item.active }}").item {{item.name}}
+        .stats-box.horisontal
+          .three-numbers
+            .block
+              h4.number 652
+              p.explanation pasisakymai (vid.)
+            .block
+              h4.number 89%
+              .explanation pasiūlytuose projektuose
+            .block
+              h4.number 89%
+              .explanation pasiūlytuose projektuose
 
-
-    .ui.page.grid
+    .ui.stackable.page.grid
       .twelve.wide.column
         .transcription
           .text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.
@@ -158,7 +169,6 @@
             .document-title Kažkoks projekto pavadinimas kur yra daug žodžiųr ir teksto. 7, 8, 9, XXXII-19865
             .date 2015-03-26 11:35
 
-
         .ui.zero.margin.center.aligned.grid: .ui.pagination.menu
           a.item
             i.left.arrow.icon
@@ -173,3 +183,12 @@
           a.item
             | Next
             i.icon.right.arrow
+
+      .four.wide.column
+        .sidebar
+          a(href="{% url 'mps' %}").item.selected: h4 Pavasario sesija 2015
+          a(href="{% url 'mps' %}").item: h4 Rudens sesija 2014
+          a(href="{% url 'mps' %}").item: h4 Pavasario sesija 2014
+          a(href="{% url 'mps' %}").item: h4 Rudens sesija 2013
+          a(href="{% url 'mps' %}").item: h4 Pavasario sesija 2013
+
