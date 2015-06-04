@@ -1,6 +1,6 @@
 - load static from staticfiles
 
-header.ui.menu.fixed
+header.ui.pointing.menu.fixed
   .ui.page.grid
     .row
       a(href="/"): img(src="{% static 'img/logo.png' %}").logo
@@ -12,9 +12,10 @@ header.ui.menu.fixed
             i.search.link.icon
 
         .ui.dropdown.item
-          | Language
+          i.user.icon
+          | Prisijungti
           i.dropdown.icon
           .menu
-            a.item English
-            a.item Russian
-            a.item Spanish
+            a.item Google
+            a.item Facebook
+            a.item OpenID
